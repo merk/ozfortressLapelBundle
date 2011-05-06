@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ This file is part of the ozfortress\LapelBundle
+
+ (c) Tim Nagel <tim@nagel.com.au>
+
+ This source file is subject to the MIT license that is bundled
+ with this source code in the file LICENSE.
+-->
+
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                        http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="ozfortress\LapelBundle\Entity\UserRank" table="ozfortress_lapel_userrank">
+
+        <id name="id" column="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+
+        <field name="class" column="class" type="string" />
+
+        <field name="identifier" column="identifier" type="string" />
+
+        <field name="index" column="rankIndex" type="integer" />
+
+        <field name="providerAlias" column="providerAlias" type="string" />
+
+    </entity>
+
+</doctrine-mapping>

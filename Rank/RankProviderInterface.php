@@ -3,7 +3,7 @@
 /*
  * This file is part of the ozfortressLapelBundle
  *
- * (c) Tim Nagel <tim@nagel.com.au
+ * (c) Tim Nagel <tim@nagel.com.au>
  *
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
@@ -14,7 +14,8 @@ namespace ozfortress\LapelBundle\Rank;
 use Symfony\Component\HttpFoundation\File\File;
 
 /**
- * Rank provider: provides a rank strategy
+ * Rank provider: provides a collection of ranks for a user.
+ * They are indexed in integer order.
  *
  * @author Tim Nagel <tim@nagel.com.au
  */
@@ -31,16 +32,16 @@ interface RankProviderInterface
      * Return the rank for a specified index.
      *
      * @param integer $index
-     * @return string
+     * @return Rank
      */
-    function getRankName($index);
+    function getRank($index);
 
     /**
-     * Returns the image resource for a specified index, if
-     * it exists.
+     * Returns the next index at the supplied offset or null if none available.
      *
-     * @param integer $index
-     * @return File
+     * @param integer $index The current index
+     * @param integer $offset The next desired index
+     * @return integer|null
      */
-    function getRankImage($index);
+    function getIndexAtOffset($index, $offset);
 }
