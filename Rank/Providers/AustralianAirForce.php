@@ -19,7 +19,7 @@ namespace ozfortress\LapelBundle\Rank\Providers;
 class AustralianAirForce extends Provider
 {
     protected $ranks = array(
-        'Non-Commissioned Office Cadet',
+        'Non-Commissioned Officer Cadet',
         'Officer Cadet',
         'Pilot Officer',
         'Flying Officer',
