@@ -41,9 +41,9 @@ class RankManager extends BaseRankManager
      */
     public function __construct(array $providers, EntityManager $em, $userRankClass)
     {
-        $this->em             = $em;
-        $this->repository     = $em->getRepository($userRankClass);
-        $this->rankStoreClass = $em->getClassMetadata($userRankClass)->name;
+        $this->em            = $em;
+        $this->repository    = $em->getRepository($userRankClass);
+        $this->userRankClass = $em->getClassMetadata($userRankClass)->name;
 
         parent::__construct($providers);
     }

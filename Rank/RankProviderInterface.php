@@ -37,11 +37,26 @@ interface RankProviderInterface
     function getRank($index);
 
     /**
+     * Checks if the provider has a rank at the specified index.
+     *
+     * @param integer $index
+     * @return boolean
+     */
+    function hasRank($index);
+
+    /**
+     * TODO: This function requires implementation to work out the offsets of an array
+     * with non-continuous array keys.
+     *
      * Returns the next index at the supplied offset or null if none available.
+     *
+     * This function is used to get a specific rank index compared to an offset
+     * from the supplied index. 'What is the rank of an index that is 3 ranks
+     * higher than the current index?'
      *
      * @param integer $index The current index
      * @param integer $offset The next desired index
      * @return integer|null
      */
-    function getIndexAtOffset($index, $offset);
+    // function getIndexAtOffset($index, $offset);
 }
